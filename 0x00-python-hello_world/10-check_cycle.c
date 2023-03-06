@@ -10,7 +10,7 @@
  * check_cycle - checks if a singly-linked list has a cycle in it
  * @list: Singly linked list
  *
- * Return: 0 if it contains a cycle. 1 if it doesn't
+ * Return: 0 if there is no cycle, 1 if there is a cycle
  */
 
 int check_cycle(listint_t *list)
@@ -22,11 +22,11 @@ int check_cycle(listint_t *list)
 	a = list -> next;
 	b = list -> next -> next;
 
-	while(a && b && a -> b)
+	while(a && b && a -> next)
 	{
 		if (a == b)
 			return (1);
-		a = a -> b;
+		a = a -> next;
 		b = b -> next -> next;
 	}
 	return (0);
