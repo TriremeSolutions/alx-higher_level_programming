@@ -8,7 +8,7 @@ if number < 0:
     last = number % -10
 else:
     last = number % 10
-elif last > 5:
+if last > 5:
     print(f"Last digit of {number} is {last}" + a1)
 elif last == 0:
     print(f"Last digit of {number} is {last}" + a2)
